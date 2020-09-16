@@ -15,16 +15,21 @@ public class Word {
     //Declare R.drawable.id varibale
     private static final int NO_VISIBILITY = -1;
 
+    //Declare R.drawable.id variable
+    private int mAudioResourceId;
+
     //Declare 2 argument Constructors
-    Word(String defaultTranslation, String miwokTranslation){
+    Word(String defaultTranslation, String miwokTranslation, int audioResourceId){
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+        mAudioResourceId = audioResourceId;
     }
     //Declare 3 arguments constructrs
-    Word(String defaultTranslation, String miwokTranslation, int imageResourceId){
+    Word(String defaultTranslation, String miwokTranslation, int imageResourceId, int audioResourceId){
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
         mImageResourceId = imageResourceId;
+        mAudioResourceId = audioResourceId;
     }
 
     //Get method for mDefaultTranslation
@@ -45,5 +50,10 @@ public class Word {
     //Get Method for mImageResourceId
     public boolean hasImage(){
         return mImageResourceId != NO_VISIBILITY;
+    }
+
+    //Get Method for mImageResourceId
+    public int getAudioResourceId(){
+        return mAudioResourceId;
     }
 }
